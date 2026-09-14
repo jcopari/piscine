@@ -35,7 +35,7 @@ int main(int argc, char **argv)
         else
         {
             ft_swap_str(&argv[i], &argv[i+1]);
-            i = 0;
+            i = 0; //Isto aqui está gerando um problema
         }
     }
     i = 0;
@@ -43,4 +43,3 @@ int main(int argc, char **argv)
         printf("%s ", argv[i++]);
     
     return (0);
-}
