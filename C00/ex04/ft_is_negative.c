@@ -1,0 +1,17 @@
+#include <unistd.h>
+
+void    ft_is_negative(int n)
+{
+    if(n < 0)
+        write(1, "N\n", 2);
+    else
+        write(1, "P\n", 2);
+}
+
+int main(void)
+{
+    ft_is_negative(0); //P
+    ft_is_negative(1); //P
+    ft_is_negative(-1); //N
+    return(0);
+}
