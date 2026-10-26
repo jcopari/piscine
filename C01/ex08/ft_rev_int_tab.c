@@ -9,13 +9,14 @@ void	ft_swap(int *a, int *b)
 
 void	ft_rev_int_tab(int *tab, int size)
 {
+	if(!tab || size <= 1)
+		return ;
+	
 	int *begin = &tab[0];
 	int *end = &tab[(size - 1)];
-	while(end != begin)
+	while(begin < end)
 	{
 		ft_swap(begin, end);
-		if((begin+1) == end)
-			return ;
 		begin++;
 		end--;
 	}
